@@ -1,0 +1,11 @@
+class Solution:
+    def twoSum(self, nums, target) :
+        m = {}
+        for i in range(len(nums)):
+            b = target - nums[i]
+            if b in m:
+                return [i,m[b]]
+            m[nums[i]] = i
+s = Solution()
+res = s.twoSum([3,2,4], 6)
+print(res)
